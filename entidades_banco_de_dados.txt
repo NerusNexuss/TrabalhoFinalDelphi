@@ -1,0 +1,48 @@
+usuários - funcionário/ gerente 
+
+conta: login, senha, cadastrar funcionário, cadastrar gerente
+
+produtos: tipo produto, nome produtos, valor produto,
+
+
+    FUNCIONARIO {
+        id_funcionario PK
+        nome_funcionario varchar(100)
+        email varchar(100) UNIQUE
+        senha varchar(255)
+        id_permissao int FK 
+	funcao varchar (100)
+    }
+
+
+
+    VENDA {
+        id_venda PK
+        data_hora_venda datetime
+        total_venda decimal(10,2)
+        id_funcionario int FK
+        id_forma_pagamento int FK
+    }
+
+    ITEM_VENDA {
+        id_item_venda PK
+        id_venda int FK
+        id_produto int FK
+        quantidade int
+        preco_unitario decimal(10,2)
+        subtotal decimal(10,2)
+    }
+
+    PRODUTO {
+        id_produto PK
+        nome_produto varchar(100)
+        descricao varchar(255)
+        preco decimal(10,2)
+        estoque int
+    }
+
+    FORMA_PAGAMENTO {
+        id_forma_pagamento PK
+        nome_forma_pagamento varchar(50) UNIQUE
+        descricao varchar(255)
+    }
