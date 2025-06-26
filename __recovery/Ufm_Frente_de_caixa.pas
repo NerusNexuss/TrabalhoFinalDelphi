@@ -5,7 +5,7 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.ExtCtrls,
-  Vcl.Grids, Vcl.DBGrids;
+  Vcl.Grids, Vcl.DBGrids, Vcl.ComCtrls, Vcl.ToolWin;
 
 type
   TForm2 = class(TForm)
@@ -14,14 +14,17 @@ type
     Label2: TLabel;
     lbQuantidade: TLabel;
     edtQuantidade: TEdit;
-    edtPrecoUnit·rio: TEdit;
+    edtPrecoUnit√°rio: TEdit;
     DBGrid1: TDBGrid;
     Panel1: TPanel;
     btnCancelar: TButton;
     lbTotal: TLabel;
     btnProcessar: TButton;
     DBGrid2: TDBGrid;
-    Label1: TLabel;
+    ToolBar1: TToolBar;
+    ToolButton1: TToolButton;
+    ToolButton2: TToolButton;
+    ToolButton3: TToolButton;
   private
     { Private declarations }
   public

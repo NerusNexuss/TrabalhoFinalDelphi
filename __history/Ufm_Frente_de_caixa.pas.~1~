@@ -21,7 +21,6 @@ type
     lbTotal: TLabel;
     btnProcessar: TButton;
     DBGrid2: TDBGrid;
-    Label1: TLabel;
   private
     { Private declarations }
   public

@@ -16,7 +16,7 @@
   TextHeight = 15
   object LbProduto: TLabel
     Left = 0
-    Top = 0
+    Top = 48
     Width = 94
     Height = 32
     Caption = 'Produto'
@@ -29,7 +29,7 @@
   end
   object Label2: TLabel
     Left = 0
-    Top = 208
+    Top = 256
     Width = 133
     Height = 32
     Caption = 'Quantidade'
@@ -42,7 +42,7 @@
   end
   object lbQuantidade: TLabel
     Left = 192
-    Top = 208
+    Top = 256
     Width = 165
     Height = 32
     Caption = 'Pre'#231'o Unit'#225'rio'
@@ -53,16 +53,9 @@
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object Label1: TLabel
-    Left = 99
-    Top = 368
-    Width = 34
-    Height = 15
-    Caption = 'Label1'
-  end
   object EdtProduto: TEdit
     Left = 0
-    Top = 48
+    Top = 96
     Width = 881
     Height = 40
     Font.Charset = DEFAULT_CHARSET
@@ -76,7 +69,7 @@
   end
   object edtQuantidade: TEdit
     Left = 0
-    Top = 246
+    Top = 294
     Width = 133
     Height = 40
     ParentCustomHint = False
@@ -92,7 +85,7 @@
   end
   object edtPrecoUnitário: TEdit
     Left = 192
-    Top = 246
+    Top = 294
     Width = 165
     Height = 40
     ParentCustomHint = False
@@ -108,7 +101,7 @@
   end
   object DBGrid1: TDBGrid
     Left = 384
-    Top = 208
+    Top = 256
     Width = 489
     Height = 289
     TabOrder = 3
@@ -120,7 +113,7 @@
   end
   object Panel1: TPanel
     Left = 384
-    Top = 495
+    Top = 543
     Width = 489
     Height = 41
     Color = clCoral
@@ -142,7 +135,7 @@
   end
   object btnCancelar: TButton
     Left = 384
-    Top = 550
+    Top = 598
     Width = 177
     Height = 75
     Caption = 'Cancelar(F11)'
@@ -156,7 +149,7 @@
   end
   object btnProcessar: TButton
     Left = 704
-    Top = 550
+    Top = 598
     Width = 177
     Height = 75
     Caption = 'Processar(F12)'
@@ -170,7 +163,7 @@
   end
   object DBGrid2: TDBGrid
     Left = 0
-    Top = 94
+    Top = 142
     Width = 881
     Height = 67
     TabOrder = 7
@@ -179,5 +172,35 @@
     TitleFont.Height = -12
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
+  end
+  object ToolBar1: TToolBar
+    Left = 0
+    Top = 0
+    Width = 881
+    Height = 42
+    ButtonHeight = 33
+    ButtonWidth = 46
+    Caption = 'ToolBar1'
+    TabOrder = 8
+    object ToolButton1: TToolButton
+      Left = 0
+      Top = 0
+      Caption = 'ToolButton1'
+      ImageIndex = 0
+    end
+    object ToolButton2: TToolButton
+      Left = 46
+      Top = 0
+      Caption = 'ToolButton2'
+      ImageIndex = 1
+    end
+    object ToolButton3: TToolButton
+      Left = 92
+      Top = 0
+      Width = 8
+      Caption = 'ToolButton3'
+      ImageIndex = 2
+      Style = tbsSeparator
+    end
   end
 end

@@ -53,13 +53,6 @@
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object Label1: TLabel
-    Left = 99
-    Top = 368
-    Width = 34
-    Height = 15
-    Caption = 'Label1'
-  end
   object EdtProduto: TEdit
     Left = 0
     Top = 48
