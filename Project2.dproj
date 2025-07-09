@@ -123,13 +123,26 @@
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
-        <DCCReference Include="Ufm_Frente_de_caixa.pas">
+        <DCCReference Include="Ufrm_Frente_de_caixa.pas">
             <Form>Form2</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="Ufm_cadastro_produto.pas">
+        <DCCReference Include="Ufrm_cadastro_produto.pas">
             <Form>UfmProduto</Form>
             <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Ufrm_cadastro_funcionario.pas">
+            <Form>Form1</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Ufrm_cadastro_pagamento.pas">
+            <Form>Form3</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="UDataModule.pas">
+            <Form>DataModule1</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
         </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>

@@ -23,7 +23,6 @@ object Form1: TForm1
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
-    OnClick = LbCadastroFuncionarioClick
   end
   object Label1: TLabel
     Left = 24

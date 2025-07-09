@@ -90,7 +90,6 @@ object UfmProduto: TUfmProduto
     Top = 294
     Width = 793
     Height = 153
-    DataSource = DataModule1.DSCadastroProduto
     TabOrder = 4
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText

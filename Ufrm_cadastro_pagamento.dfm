@@ -23,7 +23,6 @@ object Form3: TForm3
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
-    OnClick = Label1Click
   end
   object Label2: TLabel
     Left = 16
@@ -43,6 +42,20 @@ object Form3: TForm3
     Top = 85
     Width = 121
     Height = 23
+    DataSource = DataModule1.DSFormaDePagamento
     TabOrder = 0
+  end
+  object DBGrid1: TDBGrid
+    Left = 16
+    Top = 136
+    Width = 585
+    Height = 120
+    DataSource = DataModule1.DSFormaDePagamento
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = []
   end
 end

@@ -36,7 +36,6 @@ object UfmProduto: TUfmProduto
     Font.Style = [fsBold]
     ParentFont = False
     TabOrder = 0
-    Text = 'Nome Produto'
     TextHint = 'Nome Produto'
   end
   object edtPrecoProduto: TEdit
@@ -90,6 +89,7 @@ object UfmProduto: TUfmProduto
     Top = 294
     Width = 793
     Height = 153
+    DataSource = DataModule1.DSCadastroProduto
     TabOrder = 4
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText

@@ -16,7 +16,6 @@ type
     DBEdit1: TDBEdit;
     DBEdit2: TDBEdit;
     DBEdit3: TDBEdit;
-    procedure LbCadastroFuncionarioClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,10 +28,5 @@ var
 implementation
 
 {$R *.dfm}
-
-procedure TForm1.LbCadastroFuncionarioClick(Sender: TObject);
-begin
-
-end;
 
 end.
