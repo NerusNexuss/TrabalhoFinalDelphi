@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+  <Transactions>
+    <Transaction>2025/06/25 19:23:09.143,=C:\Users\estudante\Documents\delphi\Unit2.pas</Transaction>
+    <Transaction>2025/06/25 20:24:28.578,C:\Users\estudante\Documents\delphi\App_Aula_Busca_Banco\TrabalhoFinalDelphi\Ufm_Frente_de_caixa.dfm=C:\Users\estudante\Documents\delphi\Unit2.dfm</Transaction>
+    <Transaction>2025/06/25 20:24:28.578,C:\Users\estudante\Documents\delphi\App_Aula_Busca_Banco\TrabalhoFinalDelphi\Ufm_Frente_de_caixa.pas=C:\Users\estudante\Documents\delphi\Unit2.pas</Transaction>
+    <Transaction>2025/06/25 20:27:42.602,=C:\Users\estudante\Documents\delphi\Unit3.pas</Transaction>
+    <Transaction>2025/06/25 20:29:40.589,C:\Users\estudante\Documents\delphi\App_Aula_Busca_Banco\TrabalhoFinalDelphi\Ufm_cadastro_produto.pas=C:\Users\estudante\Documents\delphi\Unit3.pas</Transaction>
+    <Transaction>2025/06/25 20:29:40.589,C:\Users\estudante\Documents\delphi\App_Aula_Busca_Banco\TrabalhoFinalDelphi\Ufm_cadastro_produto.dfm=C:\Users\estudante\Documents\delphi\Unit3.dfm</Transaction>
+    <Transaction>2025/06/25 22:13:19.209,C:\Users\estudante\Documents\delphi\App_Aula_Busca_Banco\TrabalhoFinalDelphi\Project2.dproj=C:\Users\estudante\Documents\delphi\Project2.dproj</Transaction>
+  </Transactions>
+</BorlandProject>
