@@ -18,6 +18,8 @@ type
     DSCadastroProduto: TDataSource;
     FDTableFormaDePagamento: TFDTable;
     DSFormaDePagamento: TDataSource;
+    FDTableCadastrarFuncionario: TFDTable;
+    DSCadastrarFuncionario: TDataSource;
   private
     { Private declarations }
   public

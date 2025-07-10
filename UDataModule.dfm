@@ -30,7 +30,7 @@ object DataModule1: TDataModule1
   end
   object FDTableFormaDePagamento: TFDTable
     Active = True
-    IndexFieldNames = 'id_forma_pagamento'
+    IndexFieldNames = 'descricao;id_forma_pagamento;nome_forma_pagamento'
     Connection = FDConnection1
     ResourceOptions.AssignedValues = [rvEscapeExpand]
     TableName = 'forma_pagamento'
@@ -41,5 +41,18 @@ object DataModule1: TDataModule1
     DataSet = FDTableFormaDePagamento
     Left = 368
     Top = 88
+  end
+  object FDTableCadastrarFuncionario: TFDTable
+    Active = True
+    Connection = FDConnection1
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'funcionario'
+    Left = 184
+    Top = 168
+  end
+  object DSCadastrarFuncionario: TDataSource
+    DataSet = FDTableCadastrarFuncionario
+    Left = 368
+    Top = 168
   end
 end

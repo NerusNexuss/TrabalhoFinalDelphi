@@ -1,7 +1,7 @@
-object Form3: TForm3
+object cadastro: Tcadastro
   Left = 0
   Top = 0
-  Caption = 'Form3'
+  Caption = 'cadastro'
   ClientHeight = 441
   ClientWidth = 624
   Color = clBtnFace
@@ -37,25 +37,44 @@ object Form3: TForm3
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object DBEdit1: TDBEdit
+  object dat: TDBEdit
     Left = 293
     Top = 85
     Width = 121
     Height = 23
+    DataField = 'nome_forma_pagamento'
     DataSource = DataModule1.DSFormaDePagamento
     TabOrder = 0
+    OnKeyPress = datKeyPress
   end
   object DBGrid1: TDBGrid
     Left = 16
     Top = 136
     Width = 585
-    Height = 120
+    Height = 289
     DataSource = DataModule1.DSFormaDePagamento
-    TabOrder = 1
+    TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -12
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'nome_forma_pagamento'
+        Title.Caption = 'Forma de pagamento'
+        Width = 200
+        Visible = True
+      end>
+  end
+  object Novo: TButton
+    Left = 432
+    Top = 84
+    Width = 75
+    Height = 25
+    Caption = 'Novo'
+    TabOrder = 1
+    OnClick = NovoClick
   end
 end

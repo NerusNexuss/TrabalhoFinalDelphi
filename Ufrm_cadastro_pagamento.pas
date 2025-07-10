@@ -8,11 +8,14 @@ uses
   Vcl.DBCtrls, Data.DB, Vcl.Grids, Vcl.DBGrids;
 
 type
-  TForm3 = class(TForm)
+  Tcadastro = class(TForm)
     Label1: TLabel;
-    DBEdit1: TDBEdit;
+    dat: TDBEdit;
     Label2: TLabel;
     DBGrid1: TDBGrid;
+    Novo: TButton;
+    procedure datKeyPress(Sender: TObject; var Key: Char);
+    procedure NovoClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -20,12 +23,30 @@ type
   end;
 
 var
-  Form3: TForm3;
+  cadastro: Tcadastro;
 
 implementation
 
 {$R *.dfm}
 
 uses UDataModule;
+
+procedure Tcadastro.NovoClick(Sender: TObject);
+begin
+  DataModule1.FDTableFormaDePagamento.Insert;
+  dat.SetFocus;
+end;
+
+procedure Tcadastro.datKeyPress(Sender: TObject; var Key: Char);
+begin
+  if ord(Key) = VK_RETURN then
+  begin
+      with DataModule1 do
+      begin
+        FDTableFormaDePagamento.Edit;
+        FDTableFormaDePagamento.Post;
+      end;
+  end;
+end;
 
 end.
