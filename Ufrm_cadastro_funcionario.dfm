@@ -143,6 +143,7 @@ object Form1: TForm1
     Width = 75
     Height = 25
     Caption = 'Cadastrar'
+    Default = True
     TabOrder = 4
     OnClick = Btn_cadastro_funcionarioClick
   end
