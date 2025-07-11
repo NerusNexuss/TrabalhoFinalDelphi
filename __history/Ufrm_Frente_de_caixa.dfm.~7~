@@ -2,7 +2,7 @@
   Left = 0
   Top = 0
   Caption = 'Form2'
-  ClientHeight = 842
+  ClientHeight = 625
   ClientWidth = 881
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -28,8 +28,8 @@
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 8
-    Top = 472
+    Left = 0
+    Top = 256
     Width = 133
     Height = 32
     Caption = 'Quantidade'
@@ -42,7 +42,7 @@
   end
   object lbQuantidade: TLabel
     Left = 192
-    Top = 472
+    Top = 256
     Width = 165
     Height = 32
     Caption = 'Pre'#231'o Unit'#225'rio'
@@ -54,8 +54,8 @@
     ParentFont = False
   end
   object edtQuantidade: TEdit
-    Left = 8
-    Top = 518
+    Left = 0
+    Top = 294
     Width = 133
     Height = 40
     ParentCustomHint = False
@@ -71,7 +71,7 @@
   end
   object edtPrecoUnitário: TEdit
     Left = 192
-    Top = 518
+    Top = 294
     Width = 165
     Height = 40
     ParentCustomHint = False
@@ -87,7 +87,7 @@
   end
   object DBGrid1: TDBGrid
     Left = 384
-    Top = 432
+    Top = 256
     Width = 489
     Height = 265
     TabOrder = 2
@@ -99,7 +99,7 @@
   end
   object Panel1: TPanel
     Left = 384
-    Top = 695
+    Top = 519
     Width = 489
     Height = 41
     Color = clCoral
@@ -121,7 +121,7 @@
   end
   object btnCancelar: TButton
     Left = 384
-    Top = 742
+    Top = 566
     Width = 177
     Height = 75
     Caption = 'Cancelar(F11)'
@@ -135,7 +135,7 @@
   end
   object btnProcessar: TButton
     Left = 696
-    Top = 742
+    Top = 566
     Width = 177
     Height = 75
     Caption = 'Processar(F12)'
@@ -151,7 +151,7 @@
     Left = 0
     Top = 142
     Width = 881
-    Height = 195
+    Height = 99
     DataSource = DataModule1.DSCadastroProduto
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
@@ -181,17 +181,6 @@
       item
         Expanded = False
         FieldName = 'estoque'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clWindowText
-        Font.Height = -25
-        Font.Name = 'Segoe UI'
-        Font.Style = []
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
-        Width = 50
         Visible = True
       end>
   end
