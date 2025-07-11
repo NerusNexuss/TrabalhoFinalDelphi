@@ -87,7 +87,7 @@
   end
   object DBGrid1: TDBGrid
     Left = 384
-    Top = 256
+    Top = 232
     Width = 489
     Height = 289
     TabOrder = 2
@@ -99,7 +99,7 @@
   end
   object Panel1: TPanel
     Left = 384
-    Top = 543
+    Top = 519
     Width = 489
     Height = 41
     Color = clCoral
@@ -121,7 +121,7 @@
   end
   object btnCancelar: TButton
     Left = 384
-    Top = 598
+    Top = 566
     Width = 177
     Height = 75
     Caption = 'Cancelar(F11)'
@@ -134,8 +134,8 @@
     TabOrder = 4
   end
   object btnProcessar: TButton
-    Left = 704
-    Top = 598
+    Left = 696
+    Top = 566
     Width = 177
     Height = 75
     Caption = 'Processar(F12)'
@@ -188,5 +188,15 @@
       ImageIndex = 2
       Style = tbsSeparator
     end
+  end
+  object EdtNomeProdutoFrenteCaixa: TDBEdit
+    Left = 0
+    Top = 86
+    Width = 873
+    Height = 43
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 8
+    TextHint = 'Digite o nome do Produto'
   end
 end
