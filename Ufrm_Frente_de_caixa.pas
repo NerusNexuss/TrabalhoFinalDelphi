@@ -5,12 +5,11 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.ExtCtrls,
-  Vcl.Grids, Vcl.DBGrids, Vcl.ComCtrls, Vcl.ToolWin;
+  Vcl.Grids, Vcl.DBGrids, Vcl.ComCtrls, Vcl.ToolWin, Vcl.Mask, Vcl.DBCtrls;
 
 type
   TForm2 = class(TForm)
     LbProduto: TLabel;
-    EdtProduto: TEdit;
     Label2: TLabel;
     lbQuantidade: TLabel;
     edtQuantidade: TEdit;
@@ -25,6 +24,7 @@ type
     ToolButton1: TToolButton;
     ToolButton2: TToolButton;
     ToolButton3: TToolButton;
+    EdtNomeProdutoFrenteCaixa: TDBEdit;
   private
     { Private declarations }
   public
@@ -37,5 +37,7 @@ var
 implementation
 
 {$R *.dfm}
+
+uses UDataModule;
 
 end.

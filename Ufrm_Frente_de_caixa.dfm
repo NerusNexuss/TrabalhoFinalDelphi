@@ -53,20 +53,6 @@
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object EdtProduto: TEdit
-    Left = 0
-    Top = 96
-    Width = 881
-    Height = 40
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -24
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    ParentFont = False
-    TabOrder = 0
-    Text = 'Nome do produto ou c'#243'digo de barras'
-  end
   object edtQuantidade: TEdit
     Left = 0
     Top = 294
@@ -81,7 +67,7 @@
     ParentFont = False
     ParentShowHint = False
     ShowHint = False
-    TabOrder = 1
+    TabOrder = 0
   end
   object edtPrecoUnitário: TEdit
     Left = 192
@@ -97,14 +83,14 @@
     ParentFont = False
     ParentShowHint = False
     ShowHint = False
-    TabOrder = 2
+    TabOrder = 1
   end
   object DBGrid1: TDBGrid
     Left = 384
-    Top = 256
+    Top = 232
     Width = 489
     Height = 289
-    TabOrder = 3
+    TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -12
@@ -113,12 +99,12 @@
   end
   object Panel1: TPanel
     Left = 384
-    Top = 543
+    Top = 519
     Width = 489
     Height = 41
     Color = clCoral
     ParentBackground = False
-    TabOrder = 4
+    TabOrder = 3
     object lbTotal: TLabel
       Left = 8
       Top = 8
@@ -135,7 +121,7 @@
   end
   object btnCancelar: TButton
     Left = 384
-    Top = 598
+    Top = 566
     Width = 177
     Height = 75
     Caption = 'Cancelar(F11)'
@@ -145,11 +131,11 @@
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 5
+    TabOrder = 4
   end
   object btnProcessar: TButton
-    Left = 704
-    Top = 598
+    Left = 696
+    Top = 566
     Width = 177
     Height = 75
     Caption = 'Processar(F12)'
@@ -159,14 +145,14 @@
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 6
+    TabOrder = 5
   end
   object DBGrid2: TDBGrid
     Left = 0
     Top = 142
     Width = 881
     Height = 67
-    TabOrder = 7
+    TabOrder = 6
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -12
@@ -181,7 +167,7 @@
     ButtonHeight = 33
     ButtonWidth = 46
     Caption = 'ToolBar1'
-    TabOrder = 8
+    TabOrder = 7
     object ToolButton1: TToolButton
       Left = 0
       Top = 0
@@ -202,5 +188,15 @@
       ImageIndex = 2
       Style = tbsSeparator
     end
+  end
+  object EdtNomeProdutoFrenteCaixa: TDBEdit
+    Left = 0
+    Top = 86
+    Width = 873
+    Height = 43
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 8
+    TextHint = 'Digite o nome do Produto'
   end
 end

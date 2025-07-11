@@ -100,17 +100,20 @@ object UfmProduto: TUfmProduto
         Expanded = False
         FieldName = 'preco'
         Title.Caption = 'pre'#231'o'
+        Width = 100
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'estoque'
+        Width = 100
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'descricao'
         Title.Caption = 'descri'#231#227'o'
+        Width = 100
         Visible = True
       end>
   end
