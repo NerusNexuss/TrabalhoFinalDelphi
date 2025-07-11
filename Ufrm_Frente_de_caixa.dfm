@@ -87,9 +87,9 @@
   end
   object DBGrid1: TDBGrid
     Left = 384
-    Top = 232
+    Top = 256
     Width = 489
-    Height = 289
+    Height = 265
     TabOrder = 2
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -151,13 +151,38 @@
     Left = 0
     Top = 142
     Width = 881
-    Height = 67
+    Height = 99
+    DataSource = DataModule1.DSCadastroProduto
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = 30
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    ParentFont = False
     TabOrder = 6
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -12
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'nome_produto'
+        Width = 200
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'preco'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'estoque'
+        Visible = True
+      end>
   end
   object ToolBar1: TToolBar
     Left = 0
@@ -189,11 +214,19 @@
       Style = tbsSeparator
     end
   end
-  object EdtNomeProdutoFrenteCaixa: TDBEdit
+  object EdtNomeProdutoCaixa: TDBEdit
     Left = 0
     Top = 86
     Width = 873
-    Height = 43
+    Height = 40
+    DataField = 'nome_produto'
+    DataSource = DataModule1.DSCadastroProduto
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     TabOrder = 8

@@ -24,7 +24,7 @@ type
     ToolButton1: TToolButton;
     ToolButton2: TToolButton;
     ToolButton3: TToolButton;
-    EdtNomeProdutoFrenteCaixa: TDBEdit;
+    EdtNomeProdutoCaixa: TDBEdit;
   private
     { Private declarations }
   public

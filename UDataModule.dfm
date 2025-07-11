@@ -5,8 +5,8 @@ object DataModule1: TDataModule1
     Params.Strings = (
       'DriverID=SQLite'
       
-        'Database=C:\Users\estudante\Documents\delphi\App_Aula_Busca_Banc' +
-        'o\TrabalhoFinalDelphi\frente_de_caixa.sqlite'
+        'Database=C:\Users\Nerus-PC\Documents\GitHub\TrabalhoFinalDelphi\' +
+        'frente_de_caixa.sqlite'
       'LockingMode=Normal'
       'JournalMode=WAL'
       'Synchronous=Normal')
@@ -16,6 +16,7 @@ object DataModule1: TDataModule1
   end
   object FDTableCadastroProduto: TFDTable
     Active = True
+    Filtered = True
     IndexFieldNames = 'id_produto'
     Connection = FDConnection1
     ResourceOptions.AssignedValues = [rvEscapeExpand]
