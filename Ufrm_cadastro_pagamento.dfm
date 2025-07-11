@@ -1,7 +1,7 @@
-object cadastro: Tcadastro
+object FrmFormaPagamento: TFrmFormaPagamento
   Left = 0
   Top = 0
-  Caption = 'cadastro'
+  Caption = 'FrmFormaPagamento'
   ClientHeight = 441
   ClientWidth = 624
   Color = clBtnFace
@@ -76,5 +76,14 @@ object cadastro: Tcadastro
     Caption = 'Novo'
     TabOrder = 1
     OnClick = NovoClick
+  end
+  object BtnExcluir_pagamento: TButton
+    Left = 526
+    Top = 84
+    Width = 75
+    Height = 25
+    Caption = 'Excluir'
+    TabOrder = 3
+    OnClick = BtnExcluir_pagamentoClick
   end
 end

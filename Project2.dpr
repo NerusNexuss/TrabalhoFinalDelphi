@@ -5,7 +5,7 @@ uses
   Ufrm_Frente_de_caixa in 'Ufrm_Frente_de_caixa.pas' {Form2},
   Ufrm_cadastro_produto in 'Ufrm_cadastro_produto.pas' {UfmProduto},
   Ufrm_cadastro_funcionario in 'Ufrm_cadastro_funcionario.pas' {Form1},
-  Ufrm_cadastro_pagamento in 'Ufrm_cadastro_pagamento.pas' {Form3},
+  Ufrm_cadastro_pagamento in 'Ufrm_cadastro_pagamento.pas' {FrmFormaPagamento},
   UDataModule in 'UDataModule.pas' {DataModule1: TDataModule};
 
 {$R *.res}
@@ -13,10 +13,10 @@ uses
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFrmFormaPagamento, FrmFormaPagamento);
   Application.CreateForm(TForm2, Form2);
   Application.CreateForm(TUfmProduto, UfmProduto);
   Application.CreateForm(TForm1, Form1);
-  Application.CreateForm(TForm3, Form3);
   Application.CreateForm(TDataModule1, DataModule1);
   Application.Run;
 end.
