@@ -12,8 +12,6 @@ type
     LbProduto: TLabel;
     Label2: TLabel;
     lbQuantidade: TLabel;
-    edtQuantidade: TEdit;
-    edtPrecoUnitário: TEdit;
     DBGrid1: TDBGrid;
     Panel1: TPanel;
     btnCancelar: TButton;
@@ -25,6 +23,12 @@ type
     ToolButton2: TToolButton;
     ToolButton3: TToolButton;
     EdtNomeProdutoCaixa: TDBEdit;
+    EdtQuantidadeFrente: TDBEdit;
+    DBEdit1: TDBEdit;
+    BtnAdicionarProduto: TButton;
+    BtnExcluirProduto: TButton;
+    procedure BtnAdicionarProdutoClick(Sender: TObject);
+    procedure BtnExcluirProdutoClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -39,5 +43,29 @@ implementation
 {$R *.dfm}
 
 uses UDataModule;
+
+procedure TForm2.BtnAdicionarProdutoClick(Sender: TObject);
+begin
+  begin
+  DataModule1.FDTableVenda.Insert;
+end;
+
+end;
+
+procedure TForm2.BtnExcluirProdutoClick(Sender: TObject);
+begin
+
+  with DataModule1 do
+      begin
+        if FDTableVenda.RecordCount > 0 then
+        begin
+          FDTableVenda.Delete;
+        end
+        else
+          begin
+            ShowMessage('Não á vendas para ser excluidas')
+          end;
+      end;
+end;
 
 end.

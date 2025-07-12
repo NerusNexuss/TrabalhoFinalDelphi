@@ -20,6 +20,8 @@ type
     DSFormaDePagamento: TDataSource;
     FDTableCadastrarFuncionario: TFDTable;
     DSCadastrarFuncionario: TDataSource;
+    FDTableVenda: TFDTable;
+    DSVenda: TDataSource;
   private
     { Private declarations }
   public

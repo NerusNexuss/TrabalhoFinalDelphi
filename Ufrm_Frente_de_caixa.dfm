@@ -1,4 +1,4 @@
-﻿object Form2: TForm2
+object Form2: TForm2
   Left = 0
   Top = 0
   Caption = 'Form2'
@@ -53,49 +53,31 @@
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object edtQuantidade: TEdit
-    Left = 8
-    Top = 518
-    Width = 133
-    Height = 40
-    ParentCustomHint = False
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -24
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    ParentFont = False
-    ParentShowHint = False
-    ShowHint = False
-    TabOrder = 0
-  end
-  object edtPrecoUnitário: TEdit
-    Left = 192
-    Top = 518
-    Width = 165
-    Height = 40
-    ParentCustomHint = False
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clWindowText
-    Font.Height = -24
-    Font.Name = 'Segoe UI'
-    Font.Style = []
-    ParentFont = False
-    ParentShowHint = False
-    ShowHint = False
-    TabOrder = 1
-  end
   object DBGrid1: TDBGrid
     Left = 384
     Top = 432
     Width = 489
     Height = 265
-    TabOrder = 2
+    DataSource = DataModule1.DSVenda
+    TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -12
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'quantidade'
+        Width = 100
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'preco_unitario'
+        Width = 100
+        Visible = True
+      end>
   end
   object Panel1: TPanel
     Left = 384
@@ -104,7 +86,7 @@
     Height = 41
     Color = clCoral
     ParentBackground = False
-    TabOrder = 3
+    TabOrder = 1
     object lbTotal: TLabel
       Left = 8
       Top = 8
@@ -131,7 +113,7 @@
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 4
+    TabOrder = 2
   end
   object btnProcessar: TButton
     Left = 696
@@ -145,7 +127,7 @@
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 5
+    TabOrder = 3
   end
   object DBGrid2: TDBGrid
     Left = 0
@@ -159,7 +141,7 @@
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
-    TabOrder = 6
+    TabOrder = 4
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -12
@@ -186,11 +168,6 @@
         Font.Height = -25
         Font.Name = 'Segoe UI'
         Font.Style = []
-        Title.Font.Charset = DEFAULT_CHARSET
-        Title.Font.Color = clWindowText
-        Title.Font.Height = -12
-        Title.Font.Name = 'Segoe UI'
-        Title.Font.Style = []
         Width = 50
         Visible = True
       end>
@@ -203,7 +180,7 @@
     ButtonHeight = 33
     ButtonWidth = 46
     Caption = 'ToolBar1'
-    TabOrder = 7
+    TabOrder = 5
     object ToolButton1: TToolButton
       Left = 0
       Top = 0
@@ -240,7 +217,67 @@
     ParentFont = False
     ParentShowHint = False
     ShowHint = True
-    TabOrder = 8
+    TabOrder = 6
     TextHint = 'Digite o nome do Produto'
+  end
+  object EdtQuantidadeFrente: TDBEdit
+    Left = 8
+    Top = 510
+    Width = 121
+    Height = 40
+    DataField = 'quantidade'
+    DataSource = DataModule1.DSVenda
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 7
+  end
+  object DBEdit1: TDBEdit
+    Left = 192
+    Top = 510
+    Width = 121
+    Height = 40
+    DataField = 'preco_unitario'
+    DataSource = DataModule1.DSVenda
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 8
+  end
+  object BtnAdicionarProduto: TButton
+    Left = 8
+    Top = 584
+    Width = 321
+    Height = 41
+    Caption = 'Adicionar Produto'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 9
+    OnClick = BtnAdicionarProdutoClick
+  end
+  object BtnExcluirProduto: TButton
+    Left = 8
+    Top = 640
+    Width = 321
+    Height = 33
+    Caption = 'Excluir Produto'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 10
+    OnClick = BtnExcluirProdutoClick
   end
 end

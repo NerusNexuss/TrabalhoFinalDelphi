@@ -6,7 +6,7 @@ object DataModule1: TDataModule1
       'DriverID=SQLite'
       
         'Database=C:\Users\Nerus-PC\Documents\GitHub\TrabalhoFinalDelphi\' +
-        'frente_de_caixa.sqlite'
+        'frente_de_caixa_novo.sqlite'
       'LockingMode=Normal'
       'JournalMode=WAL'
       'Synchronous=Normal')
@@ -15,7 +15,6 @@ object DataModule1: TDataModule1
     Top = 16
   end
   object FDTableCadastroProduto: TFDTable
-    Active = True
     Filtered = True
     IndexFieldNames = 'id_produto'
     Connection = FDConnection1
@@ -36,7 +35,7 @@ object DataModule1: TDataModule1
     ResourceOptions.AssignedValues = [rvEscapeExpand]
     TableName = 'forma_pagamento'
     Left = 184
-    Top = 88
+    Top = 96
   end
   object DSFormaDePagamento: TDataSource
     DataSet = FDTableFormaDePagamento
@@ -45,6 +44,7 @@ object DataModule1: TDataModule1
   end
   object FDTableCadastrarFuncionario: TFDTable
     Active = True
+    IndexFieldNames = 'id_funcionario'
     Connection = FDConnection1
     ResourceOptions.AssignedValues = [rvEscapeExpand]
     TableName = 'funcionario'
@@ -55,5 +55,19 @@ object DataModule1: TDataModule1
     DataSet = FDTableCadastrarFuncionario
     Left = 368
     Top = 168
+  end
+  object FDTableVenda: TFDTable
+    Active = True
+    IndexFieldNames = 'id_item_venda'
+    Connection = FDConnection1
+    ResourceOptions.AssignedValues = [rvEscapeExpand]
+    TableName = 'item_venda'
+    Left = 184
+    Top = 240
+  end
+  object DSVenda: TDataSource
+    DataSet = FDTableVenda
+    Left = 368
+    Top = 248
   end
 end
