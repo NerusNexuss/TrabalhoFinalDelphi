@@ -1,0 +1,168 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 441
+  ClientWidth = 624
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object LbCadastroFuncionario: TLabel
+    Left = 24
+    Top = 24
+    Width = 241
+    Height = 32
+    Caption = 'Cadastro funcionario'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label1: TLabel
+    Left = 24
+    Top = 86
+    Width = 76
+    Height = 32
+    Caption = 'Nome:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 18
+    Top = 134
+    Width = 79
+    Height = 32
+    Caption = 'E-mail:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 24
+    Top = 172
+    Width = 73
+    Height = 32
+    Caption = 'senha:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 11
+    Top = 210
+    Width = 89
+    Height = 32
+    Caption = 'Fun'#231#227'o:'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -24
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object EdtNome: TDBEdit
+    Left = 106
+    Top = 97
+    Width = 121
+    Height = 23
+    DataField = 'nome_funcionario'
+    DataSource = DataModule1.DSCadastrarFuncionario
+    TabOrder = 0
+  end
+  object Edtemail: TDBEdit
+    Left = 106
+    Top = 145
+    Width = 121
+    Height = 23
+    DataField = 'email'
+    DataSource = DataModule1.DSCadastrarFuncionario
+    TabOrder = 1
+  end
+  object Edtsenha: TDBEdit
+    Left = 106
+    Top = 183
+    Width = 121
+    Height = 23
+    DataField = 'senha'
+    DataSource = DataModule1.DSCadastrarFuncionario
+    TabOrder = 2
+  end
+  object DBGrid1: TDBGrid
+    Left = 24
+    Top = 264
+    Width = 592
+    Height = 169
+    DataSource = DataModule1.DSCadastrarFuncionario
+    TabOrder = 3
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -12
+    TitleFont.Name = 'Segoe UI'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'nome_funcionario'
+        Title.Caption = 'Nome'
+        Width = 200
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'email'
+        Title.Caption = 'e-mail'
+        Width = 200
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'funcao'
+        Title.Caption = 'fun'#231#227'o'
+        Visible = True
+      end>
+  end
+  object Btn_cadastro_funcionario: TButton
+    Left = 264
+    Top = 96
+    Width = 75
+    Height = 25
+    Caption = 'Cadastrar'
+    Default = True
+    TabOrder = 4
+    OnClick = Btn_cadastro_funcionarioClick
+  end
+  object Btn_excluir: TButton
+    Left = 384
+    Top = 96
+    Width = 75
+    Height = 25
+    Caption = 'excluir'
+    TabOrder = 5
+    OnClick = Btn_excluirClick
+  end
+  object DBEdit1: TDBEdit
+    Left = 106
+    Top = 219
+    Width = 121
+    Height = 23
+    DataField = 'funcao'
+    DataSource = DataModule1.DSCadastrarFuncionario
+    TabOrder = 6
+  end
+end

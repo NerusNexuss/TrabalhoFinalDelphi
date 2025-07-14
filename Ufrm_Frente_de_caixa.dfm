@@ -79,56 +79,6 @@ object Form2: TForm2
         Visible = True
       end>
   end
-  object Panel1: TPanel
-    Left = 384
-    Top = 695
-    Width = 489
-    Height = 41
-    Color = clCoral
-    ParentBackground = False
-    TabOrder = 1
-    object lbTotal: TLabel
-      Left = 8
-      Top = 8
-      Width = 63
-      Height = 32
-      Caption = 'Total:'
-      Font.Charset = DEFAULT_CHARSET
-      Font.Color = clWindowText
-      Font.Height = -24
-      Font.Name = 'Segoe UI'
-      Font.Style = [fsBold]
-      ParentFont = False
-    end
-  end
-  object btnCancelar: TButton
-    Left = 384
-    Top = 742
-    Width = 177
-    Height = 75
-    Caption = 'Cancelar(F11)'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clHotLight
-    Font.Height = -24
-    Font.Name = 'Segoe UI'
-    Font.Style = [fsBold]
-    ParentFont = False
-    TabOrder = 2
-  end
-  object btnProcessar: TButton
-    Left = 696
-    Top = 742
-    Width = 177
-    Height = 75
-    Caption = 'Processar(F12)'
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clHotLight
-    Font.Height = -24
-    Font.Name = 'Segoe UI'
-    Font.Style = [fsBold]
-    ParentFont = False
-    TabOrder = 3
-  end
   object DBGrid2: TDBGrid
     Left = 0
     Top = 142
@@ -141,7 +91,7 @@ object Form2: TForm2
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
-    TabOrder = 4
+    TabOrder = 1
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -12
@@ -180,7 +130,7 @@ object Form2: TForm2
     ButtonHeight = 33
     ButtonWidth = 46
     Caption = 'ToolBar1'
-    TabOrder = 5
+    TabOrder = 2
     object ToolButton1: TToolButton
       Left = 0
       Top = 0
@@ -204,7 +154,7 @@ object Form2: TForm2
   end
   object EdtNomeProdutoCaixa: TDBEdit
     Left = 0
-    Top = 86
+    Top = 96
     Width = 873
     Height = 40
     DataField = 'nome_produto'
@@ -217,7 +167,7 @@ object Form2: TForm2
     ParentFont = False
     ParentShowHint = False
     ShowHint = True
-    TabOrder = 6
+    TabOrder = 3
     TextHint = 'Digite o nome do Produto'
   end
   object EdtQuantidadeFrente: TDBEdit
@@ -233,7 +183,7 @@ object Form2: TForm2
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 7
+    TabOrder = 4
   end
   object DBEdit1: TDBEdit
     Left = 192
@@ -248,12 +198,12 @@ object Form2: TForm2
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 8
+    TabOrder = 5
   end
   object BtnAdicionarProduto: TButton
-    Left = 8
-    Top = 584
-    Width = 321
+    Left = 384
+    Top = 703
+    Width = 209
     Height = 41
     Caption = 'Adicionar Produto'
     Font.Charset = DEFAULT_CHARSET
@@ -262,13 +212,13 @@ object Form2: TForm2
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 9
+    TabOrder = 6
     OnClick = BtnAdicionarProdutoClick
   end
   object BtnExcluirProduto: TButton
-    Left = 8
-    Top = 640
-    Width = 321
+    Left = 617
+    Top = 711
+    Width = 256
     Height = 33
     Caption = 'Excluir Produto'
     Font.Charset = DEFAULT_CHARSET
@@ -277,7 +227,7 @@ object Form2: TForm2
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 10
+    TabOrder = 7
     OnClick = BtnExcluirProdutoClick
   end
 end

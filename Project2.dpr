@@ -6,17 +6,21 @@ uses
   Ufrm_cadastro_produto in 'Ufrm_cadastro_produto.pas' {UfmProduto},
   Ufrm_cadastro_funcionario in 'Ufrm_cadastro_funcionario.pas' {Form1},
   Ufrm_cadastro_pagamento in 'Ufrm_cadastro_pagamento.pas' {FrmFormaPagamento},
-  UDataModule in 'UDataModule.pas' {DataModule1: TDataModule};
+  UDataModule in 'UDataModule.pas' {DataModule1: TDataModule},
+  Unit3 in 'Unit3.pas' {Form3},
+  Unit4 in 'Unit4.pas' {Form4};
 
 {$R *.res}
 
 begin
   Application.Initialize;
   Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TForm2, Form2);
   Application.CreateForm(TUfmProduto, UfmProduto);
   Application.CreateForm(TFrmFormaPagamento, FrmFormaPagamento);
-  Application.CreateForm(TForm2, Form2);
   Application.CreateForm(TForm1, Form1);
   Application.CreateForm(TDataModule1, DataModule1);
+  Application.CreateForm(TForm3, Form3);
+  Application.CreateForm(TForm4, Form4);
   Application.Run;
 end.

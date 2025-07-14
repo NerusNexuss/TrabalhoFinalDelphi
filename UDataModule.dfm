@@ -6,7 +6,7 @@ object DataModule1: TDataModule1
       'DriverID=SQLite'
       
         'Database=C:\Users\Nerus-PC\Documents\GitHub\TrabalhoFinalDelphi\' +
-        'frente_de_caixa_novo.sqlite'
+        'frente_de_caixa.sqlite'
       'LockingMode=Normal'
       'JournalMode=WAL'
       'Synchronous=Normal')
@@ -15,6 +15,7 @@ object DataModule1: TDataModule1
     Top = 16
   end
   object FDTableCadastroProduto: TFDTable
+    Active = True
     Filtered = True
     IndexFieldNames = 'id_produto'
     Connection = FDConnection1

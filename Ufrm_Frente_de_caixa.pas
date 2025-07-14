@@ -5,7 +5,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.ExtCtrls,
-  Vcl.Grids, Vcl.DBGrids, Vcl.ComCtrls, Vcl.ToolWin, Vcl.Mask, Vcl.DBCtrls;
+  Vcl.Grids, Vcl.DBGrids, Vcl.ComCtrls, Vcl.ToolWin, Vcl.Mask, Vcl.DBCtrls,
+  RLReport;
 
 type
   TForm2 = class(TForm)
@@ -13,10 +14,6 @@ type
     Label2: TLabel;
     lbQuantidade: TLabel;
     DBGrid1: TDBGrid;
-    Panel1: TPanel;
-    btnCancelar: TButton;
-    lbTotal: TLabel;
-    btnProcessar: TButton;
     DBGrid2: TDBGrid;
     ToolBar1: TToolBar;
     ToolButton1: TToolButton;
