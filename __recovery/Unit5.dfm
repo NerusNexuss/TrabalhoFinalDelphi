@@ -44,5 +44,32 @@ object Form5: TForm5
         ParentFont = False
       end
     end
+    object RLBand2: TRLBand
+      Left = 38
+      Top = 105
+      Width = 718
+      Height = 104
+      object RLLabel2: TRLLabel
+        Left = 27
+        Top = 24
+        Width = 82
+        Height = 16
+        Caption = 'Valor Unit'#225'rio'
+      end
+      object RLLabel3: TRLLabel
+        Left = 313
+        Top = 24
+        Width = 70
+        Height = 16
+        Caption = 'Quantidade'
+      end
+      object RLLabel4: TRLLabel
+        Left = 585
+        Top = 24
+        Width = 52
+        Height = 16
+        Caption = 'Subtotal'
+      end
+    end
   end
 end

@@ -11,6 +11,10 @@ type
     day: TRLReport;
     RLBand1: TRLBand;
     RLLabel1: TRLLabel;
+    RLBand2: TRLBand;
+    RLLabel2: TRLLabel;
+    RLLabel3: TRLLabel;
+    RLLabel4: TRLLabel;
     procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
