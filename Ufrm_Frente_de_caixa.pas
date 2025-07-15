@@ -6,14 +6,15 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.ExtCtrls,
   Vcl.Grids, Vcl.DBGrids, Vcl.ComCtrls, Vcl.ToolWin, Vcl.Mask, Vcl.DBCtrls,
-  RLReport;
+  RLReport, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
+  FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
+  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
 
 type
   TForm2 = class(TForm)
     LbProduto: TLabel;
     Label2: TLabel;
     lbQuantidade: TLabel;
-    DBGrid1: TDBGrid;
     DBGrid2: TDBGrid;
     ToolBar1: TToolBar;
     ToolButton1: TToolButton;
@@ -24,8 +25,13 @@ type
     DBEdit1: TDBEdit;
     BtnAdicionarProduto: TButton;
     BtnExcluirProduto: TButton;
+    btnPesquisar: TButton;
+    FDQueryProduto: TFDQuery;
+    StringGridCarrinho: TStringGrid;
     procedure BtnAdicionarProdutoClick(Sender: TObject);
     procedure BtnExcluirProdutoClick(Sender: TObject);
+    procedure btnPesquisarClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -42,11 +48,27 @@ implementation
 uses UDataModule;
 
 procedure TForm2.BtnAdicionarProdutoClick(Sender: TObject);
+var
+  produto: string;
+  precoUnit: Double;
+  quantidade: Integer;
+  total: Double;
+  novaLinha: Integer;
 begin
-  begin
-  DataModule1.FDTableVenda.Insert;
-end;
+  // Pegando os dados selecionados da tabela de produtos
+  produto := FDQueryProduto.FieldByName('nome_produto').AsString;
+  precoUnit := FDQueryProduto.FieldByName('preco').AsFloat;
+  quantidade := StrToIntDef(EdtQuantidadeFrente.Text, 1);
+  total := precoUnit * quantidade;
 
+  // Adicionando à próxima linha da grade
+  novaLinha := StringGridCarrinho.RowCount;
+  StringGridCarrinho.RowCount := novaLinha + 1;
+
+  StringGridCarrinho.Cells[0, novaLinha] := produto;
+  StringGridCarrinho.Cells[1, novaLinha] := FormatFloat('0.00', precoUnit);
+  StringGridCarrinho.Cells[2, novaLinha] := IntToStr(quantidade);
+  StringGridCarrinho.Cells[3, novaLinha] := FormatFloat('0.00', total);
 end;
 
 procedure TForm2.BtnExcluirProdutoClick(Sender: TObject);
@@ -63,6 +85,21 @@ begin
             ShowMessage('Não á vendas para ser excluidas')
           end;
       end;
+end;
+
+procedure TForm2.btnPesquisarClick(Sender: TObject);
+begin
+  FDQueryProduto.Close;
+  FDQueryProduto.ParamByName('pesquisa').AsString := '%' + EdtNomeProdutoCaixa.Text + '%';
+  FDQueryProduto.Open;
+end;
+
+procedure TForm2.FormCreate(Sender: TObject);
+begin
+  StringGridCarrinho.Cells[0, 0] := 'Produto';
+  StringGridCarrinho.Cells[1, 0] := 'Preço Unitário';
+  StringGridCarrinho.Cells[2, 0] := 'Quantidade';
+  StringGridCarrinho.Cells[3, 0] := 'Total';
 end;
 
 end.

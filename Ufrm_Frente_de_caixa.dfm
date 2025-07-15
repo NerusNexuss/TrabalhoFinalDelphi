@@ -13,6 +13,7 @@ object Form2: TForm2
   FormStyle = fsStayOnTop
   Position = poDesktopCenter
   WindowState = wsMaximized
+  OnCreate = FormCreate
   TextHeight = 15
   object LbProduto: TLabel
     Left = 0
@@ -53,35 +54,9 @@ object Form2: TForm2
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object DBGrid1: TDBGrid
-    Left = 384
-    Top = 432
-    Width = 489
-    Height = 265
-    DataSource = DataModule1.DSVenda
-    TabOrder = 0
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -12
-    TitleFont.Name = 'Segoe UI'
-    TitleFont.Style = []
-    Columns = <
-      item
-        Expanded = False
-        FieldName = 'quantidade'
-        Width = 100
-        Visible = True
-      end
-      item
-        Expanded = False
-        FieldName = 'preco_unitario'
-        Width = 100
-        Visible = True
-      end>
-  end
   object DBGrid2: TDBGrid
     Left = 0
-    Top = 142
+    Top = 189
     Width = 881
     Height = 195
     DataSource = DataModule1.DSCadastroProduto
@@ -91,7 +66,7 @@ object Form2: TForm2
     Font.Name = 'Segoe UI'
     Font.Style = []
     ParentFont = False
-    TabOrder = 1
+    TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -12
@@ -130,7 +105,7 @@ object Form2: TForm2
     ButtonHeight = 33
     ButtonWidth = 46
     Caption = 'ToolBar1'
-    TabOrder = 2
+    TabOrder = 1
     object ToolButton1: TToolButton
       Left = 0
       Top = 0
@@ -167,7 +142,7 @@ object Form2: TForm2
     ParentFont = False
     ParentShowHint = False
     ShowHint = True
-    TabOrder = 3
+    TabOrder = 2
     TextHint = 'Digite o nome do Produto'
   end
   object EdtQuantidadeFrente: TDBEdit
@@ -183,7 +158,7 @@ object Form2: TForm2
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 4
+    TabOrder = 3
   end
   object DBEdit1: TDBEdit
     Left = 192
@@ -198,11 +173,11 @@ object Form2: TForm2
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 5
+    TabOrder = 4
   end
   object BtnAdicionarProduto: TButton
-    Left = 384
-    Top = 703
+    Left = 392
+    Top = 671
     Width = 209
     Height = 41
     Caption = 'Adicionar Produto'
@@ -212,12 +187,12 @@ object Form2: TForm2
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 6
+    TabOrder = 5
     OnClick = BtnAdicionarProdutoClick
   end
   object BtnExcluirProduto: TButton
     Left = 617
-    Top = 711
+    Top = 674
     Width = 256
     Height = 33
     Caption = 'Excluir Produto'
@@ -227,7 +202,43 @@ object Form2: TForm2
     Font.Name = 'Segoe UI'
     Font.Style = [fsBold]
     ParentFont = False
-    TabOrder = 7
+    TabOrder = 6
     OnClick = BtnExcluirProdutoClick
+  end
+  object btnPesquisar: TButton
+    Left = 46
+    Top = 142
+    Width = 747
+    Height = 25
+    Caption = 'Pesquisar'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -21
+    Font.Name = 'Segoe UI'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 7
+    OnClick = btnPesquisarClick
+  end
+  object StringGridCarrinho: TStringGrid
+    Left = 424
+    Top = 472
+    Width = 425
+    Height = 177
+    ColCount = 3
+    TabOrder = 8
+  end
+  object FDQueryProduto: TFDQuery
+    Connection = DataModule1.FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM produto WHERE nome_produto LIKE :pesquisa;'
+      '')
+    Left = 16
+    Top = 600
+    ParamData = <
+      item
+        Name = 'PESQUISA'
+        ParamType = ptInput
+      end>
   end
 end
