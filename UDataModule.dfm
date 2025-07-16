@@ -5,8 +5,8 @@ object DataModule1: TDataModule1
     Params.Strings = (
       'DriverID=SQLite'
       
-        'Database=C:\Users\Nerus-PC\Documents\GitHub\TrabalhoFinalDelphi\' +
-        'frente_de_caixa.sqlite'
+        'Database=C:\Users\NTC_ SOLUTIO G'#193'S\Documents\GitHub\TrabalhoFina' +
+        'lDelphi\frente_de_caixa.sqlite'
       'LockingMode=Normal'
       'JournalMode=WAL'
       'Synchronous=Normal')

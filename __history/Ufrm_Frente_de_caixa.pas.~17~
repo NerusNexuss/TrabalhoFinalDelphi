@@ -35,7 +35,7 @@ type
   private
     { Private declarations }
   public
-
+    { Public declarations }
     EdtQuantidadeFrente: TDBEdit;
   end;
 
@@ -62,7 +62,7 @@ begin
   quantidade := StrToIntDef(EdtQuantidadeFrente.Text, 1);
   total := precoUnit * quantidade;
 
-  // Adicionando √† pr√≥xima linha da grade
+  // Adicionando ‡ prÛxima linha da grade
   novaLinha := StringGridCarrinho.RowCount;
   StringGridCarrinho.RowCount := novaLinha + 1;
 
@@ -83,7 +83,7 @@ begin
         end
         else
           begin
-            ShowMessage('N√£o √° vendas para ser excluidas')
+            ShowMessage('N„o · vendas para ser excluidas')
           end;
       end;
 end;
@@ -98,7 +98,7 @@ end;
 procedure TForm2.FormCreate(Sender: TObject);
 begin
   StringGridCarrinho.Cells[0, 0] := 'Produto';
-  StringGridCarrinho.Cells[1, 0] := 'Pre√ßo Unit√°rio';
+  StringGridCarrinho.Cells[1, 0] := 'PreÁo Unit·rio';
   StringGridCarrinho.Cells[2, 0] := 'Quantidade';
   StringGridCarrinho.Cells[3, 0] := 'Total';
 end;

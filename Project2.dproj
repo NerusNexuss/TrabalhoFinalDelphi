@@ -150,8 +150,8 @@
             <Form>Form3</Form>
             <FormType>dfm</FormType>
         </DCCReference>
-        <DCCReference Include="Unit4.pas">
-            <Form>Form4</Form>
+        <DCCReference Include="Ufrm_relatorio.pas">
+            <Form>Form5</Form>
             <FormType>dfm</FormType>
         </DCCReference>
         <BuildConfiguration Include="Base">
