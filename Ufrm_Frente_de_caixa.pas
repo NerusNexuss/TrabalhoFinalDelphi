@@ -6,9 +6,9 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Data.DB, Vcl.StdCtrls, Vcl.ExtCtrls,
   Vcl.Grids, Vcl.DBGrids, Vcl.ComCtrls, Vcl.ToolWin, Vcl.Mask, Vcl.DBCtrls,
-  RLReport, FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param,
   FireDAC.Stan.Error, FireDAC.DatS, FireDAC.Phys.Intf, FireDAC.DApt.Intf,
-  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client;
+  FireDAC.Stan.Async, FireDAC.DApt, FireDAC.Comp.DataSet, FireDAC.Comp.Client,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option, FireDAC.Stan.Param;
 
 type
   TForm2 = class(TForm)
@@ -21,7 +21,7 @@ type
     ToolButton2: TToolButton;
     ToolButton3: TToolButton;
     EdtNomeProdutoCaixa: TDBEdit;
-    EdtQuantidadeFrente: TDBEdit;
+
     DBEdit1: TDBEdit;
     BtnAdicionarProduto: TButton;
     BtnExcluirProduto: TButton;
@@ -36,6 +36,7 @@ type
     { Private declarations }
   public
     { Public declarations }
+    EdtQuantidadeFrente: TDBEdit;
   end;
 
 var

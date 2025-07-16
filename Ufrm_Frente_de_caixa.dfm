@@ -176,9 +176,9 @@ object Form2: TForm2
     TabOrder = 4
   end
   object BtnAdicionarProduto: TButton
-    Left = 392
-    Top = 671
-    Width = 209
+    Left = 46
+    Top = 575
+    Width = 217
     Height = 41
     Caption = 'Adicionar Produto'
     Font.Charset = DEFAULT_CHARSET
@@ -191,9 +191,9 @@ object Form2: TForm2
     OnClick = BtnAdicionarProdutoClick
   end
   object BtnExcluirProduto: TButton
-    Left = 617
-    Top = 674
-    Width = 256
+    Left = 46
+    Top = 634
+    Width = 217
     Height = 33
     Caption = 'Excluir Produto'
     Font.Charset = DEFAULT_CHARSET
@@ -233,8 +233,8 @@ object Form2: TForm2
     SQL.Strings = (
       'SELECT * FROM produto WHERE nome_produto LIKE :pesquisa;'
       '')
-    Left = 16
-    Top = 600
+    Left = 32
+    Top = 712
     ParamData = <
       item
         Name = 'PESQUISA'
