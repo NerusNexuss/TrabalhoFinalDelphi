@@ -87,12 +87,13 @@ object Form2: TForm2
         Font.Height = -25
         Font.Name = 'Segoe UI'
         Font.Style = []
-        Width = 50
+        Width = 52
         Visible = True
       end
       item
         Expanded = False
         FieldName = 'nome_produto'
+        Width = 105
         Visible = True
       end>
   end
