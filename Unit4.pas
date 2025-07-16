@@ -4,7 +4,7 @@ interface
 
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, RLReport;
+
 
 type
   TForm4 = class(TForm)
@@ -18,10 +18,10 @@ type
 var
   Form4: TForm4;
 
-implementation
+  implementation
 
 {$R *.dfm}
 
-uses UDataModule;
+
 
 end.

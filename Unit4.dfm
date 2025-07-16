@@ -11,15 +11,4 @@ object Form4: TForm4
   Font.Name = 'Segoe UI'
   Font.Style = []
   TextHeight = 15
-  object RLReport1: TRLReport
-    Left = 8
-    Top = 8
-    Width = 794
-    Height = 1123
-    Font.Charset = DEFAULT_CHARSET
-    Font.Color = clBlack
-    Font.Height = -13
-    Font.Name = 'Arial'
-    Font.Style = []
-  end
 end
