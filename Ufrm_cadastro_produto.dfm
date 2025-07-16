@@ -91,9 +91,8 @@ object UfmProduto: TUfmProduto
     Columns = <
       item
         Expanded = False
-        FieldName = 'id_produto'
-        Title.Caption = 'produto'
-        Width = 100
+        FieldName = 'nome_produto'
+        Width = 200
         Visible = True
       end
       item

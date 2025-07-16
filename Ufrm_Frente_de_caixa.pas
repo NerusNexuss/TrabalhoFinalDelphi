@@ -28,6 +28,7 @@ type
     btnPesquisar: TButton;
     FDQueryProduto: TFDQuery;
     StringGridCarrinho: TStringGrid;
+    DataSource1: TDataSource;
     procedure BtnAdicionarProdutoClick(Sender: TObject);
     procedure BtnExcluirProdutoClick(Sender: TObject);
     procedure btnPesquisarClick(Sender: TObject);
@@ -55,13 +56,13 @@ var
   total: Double;
   novaLinha: Integer;
 begin
-  // Pegando os dados selecionados da tabela de produtos
+
   produto := FDQueryProduto.FieldByName('nome_produto').AsString;
   precoUnit := FDQueryProduto.FieldByName('preco').AsFloat;
   quantidade := StrToIntDef(EdtQuantidadeFrente.Text, 1);
   total := precoUnit * quantidade;
 
-  // Adicionando à próxima linha da grade
+
   novaLinha := StringGridCarrinho.RowCount;
   StringGridCarrinho.RowCount := novaLinha + 1;
 

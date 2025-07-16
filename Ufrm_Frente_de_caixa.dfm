@@ -59,7 +59,7 @@ object Form2: TForm2
     Top = 189
     Width = 881
     Height = 195
-    DataSource = DataModule1.DSCadastroProduto
+    DataSource = DataSource1
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = 30
@@ -75,12 +75,6 @@ object Form2: TForm2
     Columns = <
       item
         Expanded = False
-        FieldName = 'nome_produto'
-        Width = 200
-        Visible = True
-      end
-      item
-        Expanded = False
         FieldName = 'preco'
         Width = 100
         Visible = True
@@ -93,7 +87,13 @@ object Form2: TForm2
         Font.Height = -25
         Font.Name = 'Segoe UI'
         Font.Style = []
-        Width = 50
+        Width = 52
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'nome_produto'
+        Width = 105
         Visible = True
       end>
   end
@@ -233,12 +233,17 @@ object Form2: TForm2
     SQL.Strings = (
       'SELECT * FROM produto WHERE nome_produto LIKE :pesquisa;'
       '')
-    Left = 32
-    Top = 712
+    Left = 24
+    Top = 408
     ParamData = <
       item
         Name = 'PESQUISA'
         ParamType = ptInput
       end>
+  end
+  object DataSource1: TDataSource
+    DataSet = FDQueryProduto
+    Left = 120
+    Top = 408
   end
 end
